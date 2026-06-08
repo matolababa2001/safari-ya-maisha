@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-w!i0v76gvj0bw6f9_lz#&b_#c^iii&f55!yljt532%bhv7p8^c
 DEBUG = "False"
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://safari-ya-maisha.onrender.com/']
 
 
 # Application definition
