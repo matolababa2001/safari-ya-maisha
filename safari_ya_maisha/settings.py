@@ -38,6 +38,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin' ,
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,6 +50,12 @@ INSTALLED_APPS = [
      'cloudinary',
     'cloudinary_storage',
 ]
+JAZZMIN_SETTINGS = {
+    "site_title": "Safari ya Maisha",
+    "site_header": "Safari ya Maisha",
+    "site_brand": "Safari ya Maisha",
+    "site_logo": "images/logo.png",
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
