@@ -259,7 +259,6 @@ tinycss2==1.1.0
 tokenizers==0.13.3
 toml==0.10.2
 tomli==1.2.2
-torch @ https://download.pytorch.org/whl/cpu/torch-1.10.1%2Bcpu-cp38-cp38-win_amd64.whl#sha256=c20f88e6e4a318d96eb5789cbceff764233104413132cf9230f7134104b3d252
 tornado==6.4
 tqdm==4.65.0
 traitlets==5.14.3
