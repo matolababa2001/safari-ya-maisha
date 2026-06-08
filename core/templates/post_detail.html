@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="post-card">
+
+<h1>{{ post.title }}</h1>
+
+<p>
+{{ post.content }}
+</p>
+
+<p>
+<small>
+Posted on {{ post.created_at }}
+</small>
+</p>
+
+</div>
+
+{% if post.image %}
+<img src="{{ post.image.url }}"
+     class="img-fluid rounded">
+{% endif %}
+
+{% if post.video %}
+<video controls width="100%">
+    <source src="{{ post.video.url }}">
+</video>
+{% endif %}
+
+{% if post.audio %}
+<audio controls>
+    <source src="{{ post.audio.url }}">
+</audio>
+{% endif %}
+
+<hr>
+
+<h3>Comments</h3>
+
+{% for comment in comments %}
+
+<div class="card mb-2">
+    <div class="card-body">
+
+        <strong>{{ comment.name }}</strong>
+
+        <p>{{ comment.comment }}</p>
+
+        <small>{{ comment.created_at }}</small>
+
+    </div>
+</div>
+
+{% empty %}
+
+<p>No comments yet.</p>
+
+{% endfor %}
+
+<hr>
+
+<h3>Add Comment</h3>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<input type="text"
+name="name"
+class="form-control mb-3"
+placeholder="Your Name">
+
+<textarea
+name="comment"
+class="form-control mb-3"
+rows="4"
+placeholder="Write comment">
+</textarea>
+
+<button class="btn btn-success">
+Submit Comment
+</button>
+
+    <a href="https://wa.me/?text={{ request.build_absolute_uri }}"
+   target="_blank"
+   class="btn btn-success">
+
+   📱 Share on WhatsApp
+
+</a>
+
+</form>
+
+{% endblock %}

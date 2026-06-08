@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Search results for "{{ query }}"</h3>
+
+{% for post in posts %}
+
+<div class="card p-3 mb-3">
+
+    <h4>{{ post.title }}</h4>
+
+    <p>{{ post.content|truncatewords:20 }}</p>
+
+    <a href="{% url 'post_detail' post.id %}">
+        Read More
+    </a>
+
+</div>
+
+{% empty %}
+
+<p>No results found</p>
+
+{% endfor %}
+
+{% endblock %}
