@@ -59,6 +59,7 @@ JAZZMIN_SETTINGS = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -159,9 +160,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dtcz38gdb',
     'API_KEY': '144879634245851',
