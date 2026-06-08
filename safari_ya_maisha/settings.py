@@ -143,7 +143,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_REDIRECT_URL = '/profile/'
 LOGOUT_REDIRECT_URL = '/'
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dtcz38gdb',
     'API_KEY': '144879634245851',
