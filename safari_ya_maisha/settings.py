@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-w!i0v76gvj0bw6f9_lz#&b_#c^iii&f55!yljt532%bhv7p8^c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "False"
 
+X_FRAME_OPTIONS = "SAMEORIGIN"
 SECRET_KEY = os.environ.get("SECRET_KEY")
 ALLOWED_HOSTS = [
     'safari-ya-maisha.onrender.com',
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'core',
      'cloudinary',
     'cloudinary_storage',
+    'jazzmin' ,
 ]
 
 MIDDLEWARE = [
