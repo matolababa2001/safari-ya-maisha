@@ -1,10 +1,9 @@
 Django==4.2.11
 gunicorn
+whitenoise
 pillow
 cloudinary
 django-cloudinary-storage
 dj-database-url
 psycopg2-binary
 setuptools>=65
-django-jazzmin==3.0.1
-whitenoise==6.9.0
