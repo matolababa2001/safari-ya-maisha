@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'core',
      'cloudinary',
     'cloudinary_storage',
-    'jazzmin' ,
 ]
 
 MIDDLEWARE = [
