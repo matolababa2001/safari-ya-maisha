@@ -5,7 +5,7 @@ from django.conf import settings
 CATEGORY_CHOICES = (
     ('neno', 'Neno la Mungu'),
     ('lishe', 'Tiba Lishe'),
-    ('ndoa', 'Mahusiano ya Ndoa'),
+    ('ndoa', 'Ushauri Wa Biashara Na Mahusiano ya Ndoa'),
 )
 
 class Post(models.Model):
@@ -13,7 +13,7 @@ class Post(models.Model):
     CATEGORY_CHOICES = (
         ('neno','Neno la Mungu'),
         ('lishe','Tiba Lishe'),
-        ('ndoa','Mahusiano ya Ndoa'),
+        ('ndoa','Ushauri Wa Biashara Na Mahusiano ya Ndoa'),
     )
 
     title = models.CharField(max_length=255)
